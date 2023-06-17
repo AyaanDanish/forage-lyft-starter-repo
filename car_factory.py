@@ -4,6 +4,7 @@ from carparts.battery import NubbinBattery, SpindlerBattery
 
 
 def CarFactory():
+    @staticmethod
     def create_calliope(
         self, current_date, last_service_date, current_mileage, last_service_mileage
     ):
@@ -11,6 +12,7 @@ def CarFactory():
         battery = SpindlerBattery(self.last_service_date, self.current_date)
         return Car(engine, battery)
 
+    @staticmethod
     def create_glissade(
         self, current_date, last_service_date, current_mileage, last_service_mileage
     ):
@@ -18,11 +20,13 @@ def CarFactory():
         battery = SpindlerBattery(self.last_service_date, self.current_date)
         return Car(engine, battery)
 
+    @staticmethod
     def create_palindrome(self, current_date, last_service_date, warning_light_on):
         engine = SternmanEngine(self.last_service_date, self.warning_light_on)
         battery = SpindlerBattery(self.last_service_date, self.current_date)
         return Car(engine, battery)
 
+    @staticmethod
     def create_rorschach(
         self, current_date, last_service_date, current_mileage, last_service_mileage
     ):
@@ -30,6 +34,7 @@ def CarFactory():
         battery = NubbinBattery(self.last_service_date, self.current_date)
         return Car(engine, battery)
 
+    @staticmethod
     def create_thovex(
         self, current_date, last_service_date, current_mileage, last_service_mileage
     ):
