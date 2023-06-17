@@ -6,7 +6,7 @@ from carparts.battery import NubbinBattery, SpindlerBattery
 
 
 class TestNubbinBattery(unittest.TestCase):
-    def should_be_serviced(self):
+    def test_should_be_serviced(self):
         current_date = datetime.today().date()
         last_service_date = current_date.replace(year=current_date.year - 5)
 
@@ -15,7 +15,7 @@ class TestNubbinBattery(unittest.TestCase):
         )
         self.assertTrue(battery.needs_service())
 
-    def should_not_be_serviced(self):
+    def test_should_not_be_serviced(self):
         current_date = datetime.today().date()
         last_service_date = current_date.replace(year=current_date.year - 1)
 
