@@ -7,7 +7,7 @@ class Battery(ABC):
         pass
 
 
-class NubbinBattery(Battery, ABC):
+class NubbinBattery(Battery):
     def __init__(self, last_service_date, current_date):
         self.last_service_date = last_service_date
         self.current_date = current_date
@@ -19,7 +19,7 @@ class NubbinBattery(Battery, ABC):
         return self.current_date > service_threshold_date
 
 
-class SpindlerBattery(Battery, ABC):
+class SpindlerBattery(Battery):
     def __init__(self, last_service_date, current_date):
         self.last_service_date = last_service_date
         self.current_date = current_date
