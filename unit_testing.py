@@ -108,7 +108,7 @@ class TestCarriganTire(unittest.TestCase):
         self.assertTrue(tire.needs_service())
 
     def test_should_not_be_serviced(self):
-        tire_sensor_readings = [0.1, 0.5, 0.3, 0.2]
+        tire_sensor_readings = [0.1, 0.5, 0.3, 0.1]
 
         tire = CarriganTire(tire_sensor_readings=tire_sensor_readings)
         self.assertFalse(tire.needs_service())
@@ -122,7 +122,7 @@ class TestOctoprimeTire(unittest.TestCase):
         self.assertTrue(tire.needs_service())
 
     def test_should_not_be_serviced(self):
-        tire_sensor_readings = [0.1, 0.5, 0.3, 0.2]
+        tire_sensor_readings = [0.1, 0.5, 0.3, 0.1]
 
         tire = OctoprimeTire(tire_sensor_readings=tire_sensor_readings)
         self.assertFalse(tire.needs_service())
